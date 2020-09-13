@@ -132,6 +132,9 @@ services:
       - elastic
     depends_on:
       - logstash
+    environment:
+      - ELASTICSEARCH_PASSWORD=$ELASTIC_PASSWORD
+      - ELASTICSEARCH_USERNAME=elastic
 
 volumes:
   elastic:
