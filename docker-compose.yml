@@ -13,6 +13,8 @@ services:
        - cluster.name=elastic-docker-cluster
        - discovery.seed_hosts=elastic02,elastic03
        - cluster.initial_master_nodes=elastic,elastic02
+       - xpack.security.enabled=true
+       - ELASTIC_PASSWORD=$ELASTIC_PASSWORD
        - bootstrap.memory_lock=true
        - ES_JAVA_OPTS= -Xms1G -Xmx1G
     ulimits:
